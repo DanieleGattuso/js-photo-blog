@@ -76,7 +76,6 @@ main{
 
 .pin {
     position: absolute; 
-    top: ; 
     left: 50%; 
     transform: translateX(-50%); 
     width: 30px; 
