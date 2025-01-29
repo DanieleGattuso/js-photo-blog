@@ -42,12 +42,12 @@ main{
 
 #card_container {
 
-    width: 70%;
+    width: 60%;
     height: 600px;
     /* background-color: blue; */
     margin-top: 30px;
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
     flex-wrap: wrap;
     
 }
@@ -55,15 +55,17 @@ main{
 .cards{
 
     background-color: white;
-    width: 300px;
+    width: 350px;
     margin-top: 20px;
     height: 370px;
-    
+    transition: transform 0.3s ease; /* Transizione per l'animazione fluida */
+    perspective: 1000px; /* Per dare l'effetto 3D */
+
 }
 
 .image_container {
     position: relative; 
-    width: 300px; 
+    width: 350px; 
     height: 300px;
     
 }
@@ -76,6 +78,7 @@ main{
 
 .pin {
     position: absolute; 
+    
     left: 50%; 
     transform: translateX(-50%); 
     width: 30px; 
@@ -83,3 +86,16 @@ main{
     z-index: 10; 
     
 }
+
+
+
+.cards:hover {
+    transform: rotate(30deg); /* Rotazione sull'asse Y */
+}
+
+.cards:hover .pin{
+    display: none;
+}
+
+
+/* POP UP */
