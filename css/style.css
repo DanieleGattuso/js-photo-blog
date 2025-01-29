@@ -6,6 +6,7 @@
 }
 h1{
     font-size: 60px;
+    font-family: 'Edu Tas Beginner';
 }
 body{
 
@@ -15,11 +16,16 @@ body{
 
 figcaption {
     margin-left: 15px;
+    font-family: 'Sometype Mono';
 }
 
 h2{
     margin-left: 15px;
+    font-family: 'Sometype Mono';
 }
+
+
+
 /* HEADER */
 
 header{
@@ -37,6 +43,7 @@ main{
     display: flex;
     justify-content: center;
     
+    
 
 }
 
@@ -47,6 +54,7 @@ main{
     /* background-color: blue; */
     margin-top: 30px;
     display: flex;
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
     
@@ -67,7 +75,6 @@ main{
     position: relative; 
     width: 350px; 
     height: 300px;
-    
 }
 
 .image_size {
@@ -78,19 +85,20 @@ main{
 
 .pin {
     position: absolute; 
-    
-    left: 50%; 
-    transform: translateX(-50%); 
+    top: -15px; /*  Sposta il pin sopra l'immagine  */
+    left: 50%;
+    transform: translateX(-50%); /* Centra il pin orizzontalmente */
     width: 30px; 
     height: auto; 
-    z-index: 10; 
-    
+    z-index: 10; /* Assicura che sia sopra l'immagine */
 }
 
 
 
 .cards:hover {
-    transform: rotate(30deg); /* Rotazione sull'asse Y */
+    transform: rotate(30deg); 
+    cursor: pointer;
+    box-shadow: 5px 5px rgba(0, 0, 0, 1);
 }
 
 .cards:hover .pin{
@@ -99,3 +107,56 @@ main{
 
 
 /* POP UP */
+
+
+#popUp {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;     
+}
+
+#chiudere_pop_up{
+    
+    height: 30px;
+    cursor: pointer;
+    width: 100px;
+    font-size: 20px;
+    margin: 20px ;
+    background-color: rgb(47, 191, 235);
+    border-radius: 20px;
+}
+
+.hidden{
+    display: none;
+}
+
+#immagine_pop_up{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+
+#immagine_pop_up img{
+    width: 100%;
+}
+
+
+/* Media query per ridurre la dimensione del font dell'h1 su schermi piccoli */
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 40px; /* Riduce la dimensione del testo per schermi più piccoli */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px; /* Ulteriore riduzione per schermi molto piccoli */
+    }
+}
